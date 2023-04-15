@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: FuturaFamilyC;
+    src: url(assets/fonts/futurabookc.otf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(assets/fonts/futurabook.ttf);
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(assets/fonts/gilroy.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(assets/fonts/raleway.ttf);
+}
+
+* {
+    @apply box-border;
+}
+
+html {
+    font-family: Futura, sans-serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+
+@layer components {
+    .w-content {
+        @apply w-10/12 md:w-11/12 xl:w-10/12;
+    }
+    .btn-action {
+        @apply bg-blue text-white py-0 px-9 rounded font-medium flex items-center
+        transition ease-out duration-300 md:px-5 lg:px-7 xl:px-9 hover:bg-lightblue;
+    }
+    .main-top-offset {
+        @apply mt-28
+    }
+    /*   navigation-bar   */
+    .nav-link {
+        @apply w-full py-4 mx-5 text-xl text-black text-center md:py-0 md:mx-2 md:h-fit md:w-fit md:text-white md:text-sm
+        lg:mx-5 xl:text-base transition ease-in-out hover:text-blue;
+    }
+    .active-tab {
+        @apply font-bold;
+    }
+    /*   home-services   */
+    .service {
+        @apply flex flex-col shadow-service w-full rounded-lg col-auto
+    }
+    .ask-button {
+        @apply bg-white text-sm text-darkblue font-[600] h-10 w-40 rounded-lg my-3 transition hover:opacity-80
+    }
+    /*   home-about-us   */
+    .story-text {
+        @apply text-white text-center w-full my-2 text-sm sm:w-11/12 md:text-base lg:w-9/12
+    }
+    .about-us-block-height {
+        @apply h-[36rem] sm:h-[26rem]
+    }
+    /*   home-team   */
+    .team-bg-blured-block {
+        @apply w-48 h-48 absolute rounded-full blur-[190px] bg-darkblue-team-bg
+    }
+    /*   service   */
+    .active-service-link {
+        @apply bg-blue text-white
+    }
+    /*   contacts   */
+    .contacts-block {
+        @apply flex flex-col items-center w-full bg-lightblue-contacts-bg rounded-lg p-4 pb-6 sm:w-56
+    }
+    .contacts-divider {
+        @apply h-[1px] w-full bg-lightblue-contacts-line my-2
+    }
+    .contacts-link {
+        @apply transition hover:text-darkblue
+    }
+    .contacts-image-link {
+        @apply relative
+    }
+    /*   terms-and-privacy   */
+    .terms-and-policy-paragraph {
+        @apply w-full max-w-full my-4 font-gilroy text-xs md:text-sm
+    }
+    .terms-and-policy-header {
+        @apply w-full my-8 font-gilroy text-xl font-medium md:text-3xl
+    }
+}
